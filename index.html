@@ -37,11 +37,12 @@
 
 <!-- Append #disqus_thread to the href attribute in your links. This will tell Disqus which links to look up and return the comment count. For example: <a href="http://foo.com/bar.html#disqus_thread">Link</a> -->         
 
-<footer>This site made with &#9829; by SideProjectGirl</footer>
+<footer>This site made with &#9829; by Unicornicopia</footer>
 
 	</body>
 <script>
 'use strict';
+
 
 let array = [
 "“Know thyself” is an ancient concept going back much further than Socrates and is at the root of much of philosophy. With that in mind, what are the most important things to learn about one’s self or is all self-knowledge equal?",
@@ -252,7 +253,11 @@ let array = [
 "Your perception of the world is just what your brain constructs for you from the signals sent by your senses. Plus, there is a slight delay, so you aren’t even experiencing the simulation in real time. What would it be like if humans could perceive what the world is actually like and do it in real time? Also, what are the ramifications of every single person’s reality being a little different and unique to them?",
 ];
 
-$("div").html("<div>" + array[Math.floor(Math.random()*100)] + "</div>")
+let randomNumber = Math.floor(Math.random()*100)
+$("div").html("<div>" + array[randomNumber] + randomNumber + "</div>")
+
+document.URL = document.URL + "/" + randomNumber;
+
 
 </script>
 </html>
