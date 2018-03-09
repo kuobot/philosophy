@@ -11,16 +11,17 @@
 	
 <div id="disqus_thread"></div>
 	<script>
+	let randomNumber = Math.floor(Math.random()*100)
 
 	/**
 	*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 	*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-	/*
+	
 	var disqus_config = function () {
-	this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
-	this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	this.page.url = "https://kuobot.github.io/philosophy/";  // Replace PAGE_URL with your page's canonical URL variable
+	this.page.identifier = randomNumber; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.title = array[randomNumber];
 	};
-	*/
 
 	(function() { // DON'T EDIT BELOW THIS LINE
 	var d = document, s = d.createElement('script');
@@ -253,7 +254,6 @@ let array = [
 "Your perception of the world is just what your brain constructs for you from the signals sent by your senses. Plus, there is a slight delay, so you aren’t even experiencing the simulation in real time. What would it be like if humans could perceive what the world is actually like and do it in real time? Also, what are the ramifications of every single person’s reality being a little different and unique to them?",
 ];
 
-let randomNumber = Math.floor(Math.random()*100)
 $("div").html("<div>" + array[randomNumber] + randomNumber + "</div>")
 
 document.URL = document.URL + "/" + randomNumber;
