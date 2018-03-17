@@ -5,34 +5,80 @@
 
  <style>
 
-.container {
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+}
+
+.bg {
+    /* The image used */
+ /*   background-image: url("https://images.unsplash.com/photo-1494791368093-85217fbbf8de?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8423fad68968794f97d71694c0a0e0f2&auto=format&fit=crop&w=800&q=80");*/
+
+   background-image: url("https://images.fastcompany.net/image/upload/w_1280,f_auto,q_auto,fl_lossy/fc/3069042-poster-p-boxs-aaron-levie-on-why-business-leaders-should-get-more-political.jpg");
+   
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    font-family: helvetica;
+    color: white;
+}
+
+.bg-overlay {
+    position: absolute;
+    height: 100%;
+/*    background-color: rgba(255, 0, 0, 0.3); */  
+/*    background: linear-gradient(red, yellow); /* Standard syntax (must be last) */
+    background-color: rgba(0, 0, 0, 0.3);
+    }
+
+.text-container {
+	position: absolute;
 	margin: 40px;
-	padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.buffer {
+	height: 800px;
+}
+
+.question {
+    background-color: rgba(0, 0, 0, 0.3);
+    font-family: Helvetica;
+	font-size: 18px;
+	margin: 40px 100px 40px 0;
+	padding: 40px ;
+	float: left;
+	width: 60%;
+	color: #ccc;
 }
 
 .quotes {
-	font-size: 24px;
-	font-weight: 800;
+	font-size: 18px;
+	font-weight: 100;
 	margin: 40px;
-	padding: 20px;
+	padding: 20px 100px;
+	font-style: italic;
+	height: 100vh;
 	float: right;
-	width: 50%;
-	}
+	width: 60%;
+	color: #ccc;
+}
+
 
 .guest {
 	font-size: 20px;
 	margin: 40px;
 	padding: 20px;
 	text-align: right;
+	color: #ccc;
 }
 
-.question {
-	font-size: 28px;
-	margin: 40px;
-	padding: 20px;
-	float: left;
-	width: 50%;
-}
 
 footer {
 	position: fixed;
@@ -51,11 +97,12 @@ footer {
 	</head>
 	<body>               
 
-<div class="container">
+<div class="bg"><div class="text-container">
 	<div class="question"></div>
+	<div class="buffer"></div>
 	<div class="quotes"></div>
 	<div class="guest"></div>
-</div>
+</div></div>
 
 <footer>This site made with &#9829; by Unicornicopia</footer>
 
@@ -100,9 +147,9 @@ let question = [
 ];
 
 
-$( "div.question" ).html( question[randomNumber] );
+$( "div.question" ).html(question[randomNumber]);
 $( "div.guest" ).html( guest[randomNumber] );
-$( "div.quotes" ).html( quote[randomNumber] );
+$( "div.quotes" ).html('"' +  quote[randomNumber]  + '"');
 
 
 
